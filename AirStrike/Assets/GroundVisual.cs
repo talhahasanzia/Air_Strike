@@ -8,8 +8,8 @@ public class GroundVisual : MonoBehaviour {
 	// Use this for initialization
 	public enum HorizontalAlignment{left, center, right}; 
 	public enum VerticalAlignment{top, middle, bottom}; 
-	public HorizontalAlignment horizontalAlignment = HorizontalAlignment.right;
-	public VerticalAlignment verticalAlignment = VerticalAlignment.top; 
+	//public HorizontalAlignment horizontalAlignment = HorizontalAlignment.right;
+	//public VerticalAlignment verticalAlignment = VerticalAlignment.top; 
 	public enum ScreenDimensions{pixels, screen_percentage};
 	public ScreenDimensions dimensionsIn = ScreenDimensions. pixels; 
 	public int width = 100; 
@@ -41,9 +41,9 @@ public class GroundVisual : MonoBehaviour {
 			 Mathf.RoundToInt(height * 0.01f * Screen. height);
 		} 
 
-		horizontalAlignment = HorizontalAlignment.right;
-		verticalAlignment = VerticalAlignment.top; 
-								hloc = Mathf.RoundToInt((Screen.width - hsize) - (xOffset * 0.01f * Screen.width));
+		//horizontalAlignment = HorizontalAlignment.right;
+		//verticalAlignment = VerticalAlignment.top; 
+			hloc = Mathf.RoundToInt((Screen.width - hsize) - (xOffset * 0.01f * Screen.width));
 		 
 		  
 
