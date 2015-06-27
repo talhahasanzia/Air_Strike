@@ -78,7 +78,7 @@ public class MapCreation : MonoBehaviour {
 	}
 
 	void OnGUI(){
-
+		try{
 		Vector3 markerPos = cam.WorldToViewportPoint  (target.position);
 		int pointX =  Mathf.RoundToInt((cam.pixelRect.xMin + cam.pixelRect.xMax) * markerPos.x);
 
@@ -87,5 +87,12 @@ public class MapCreation : MonoBehaviour {
 		marker=new Texture2D (cam.targetTexture.width, cam.targetTexture.height);
 
 		GUI.DrawTexture( new Rect(pointX-(marker.width * 0.5f),pointY-(marker.height * 0.5f),marker.width,marker.height), marker, ScaleMode.StretchToFill, true, 0.0f);
+		}
+		catch(System.NullReferenceException ex)
+		{
+			ex.ToString();
+		}
+	
+	
 	}
 }
