@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\BasicControl.cs" />
      <Compile Include="Assets\GroundVisual.cs" />
+     <Compile Include="Assets\Launched.cs" />
      <Compile Include="Assets\MapCreation.cs" />
      <Compile Include="Assets\Switching.cs" />
      <None Include="Assets\license.txt" />

@@ -4,6 +4,8 @@ using System.Collections;
 public class BasicControl : MonoBehaviour {
 	public GameObject AirCraft;
 	public GameObject rayCastOrigin;
+	public GameObject Missile;
+	bool Launch=false;
 	//public float AngleX,AngleY,AngleZ;
 	// Use this for initialization
 	void Start () {
@@ -12,11 +14,27 @@ public class BasicControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		Vector3 targetDir = new Vector3 (45, 0, 0);
+
 		RaycastHit info;
+
+
+		if (Input.GetKeyUp (KeyCode.Space)) {
+			Launch=true;		
+		
+		}
 		if (Physics.Raycast (rayCastOrigin.transform.position,Quaternion.Euler(0,0,135) * transform.up ,out info,100)) {
 		
 			Debug.DrawLine(rayCastOrigin.transform.position,info.point);
+
+			if(Launch)
+			{
+
+				GameObject missileClone=Missile;
+
+				Instantiate(missileClone,Missile.transform.position,missileClone.transform.rotation);
+				Launch=false;
+
+			}
 			Debug.Log("Raycast working");
 
 		
