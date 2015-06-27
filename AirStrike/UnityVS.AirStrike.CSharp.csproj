@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\BasicControl.cs" />
     <Compile Include="Assets\GroundVisual.cs" />
+    <Compile Include="Assets\Switching.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\license.txt" />
