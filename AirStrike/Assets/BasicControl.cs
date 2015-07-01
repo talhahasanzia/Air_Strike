@@ -6,6 +6,7 @@ public class BasicControl : MonoBehaviour {
 	public GameObject rayCastOrigin;
 	public GameObject Missile;
 	bool Launch=false;
+	public GameObject empty_obj;
 	//public float AngleX,AngleY,AngleZ;
 	// Use this for initialization
 	void Start () {
@@ -28,11 +29,17 @@ public class BasicControl : MonoBehaviour {
 
 			if(Launch)
 			{
+				Vector3 tempTar=info.point;
+				GameObject missileClone;
 
-				GameObject missileClone=Missile;
+				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Quaternion.identity);
 
-				Instantiate(missileClone,Missile.transform.position,missileClone.transform.rotation);
+				Rigidbody rg=missileClone.GetComponent<Rigidbody>();
+				rg.AddForce(Vector3.forward*30);
+
+
 				Launch=false;
+
 
 			}
 			Debug.Log("Raycast working");
@@ -63,4 +70,6 @@ public class BasicControl : MonoBehaviour {
 			
 		}
 	}
+
+
 }
