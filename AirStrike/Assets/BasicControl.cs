@@ -32,10 +32,10 @@ public class BasicControl : MonoBehaviour {
 				Vector3 tempTar=info.point;
 				GameObject missileClone;
 
-				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Quaternion.identity);
+				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Missile.transform.rotation);
 
 				Rigidbody rg=missileClone.GetComponent<Rigidbody>();
-				rg.AddForce(Vector3.forward*30);
+				rg.AddForce(-1650,-1200,0);
 
 
 				Launch=false;

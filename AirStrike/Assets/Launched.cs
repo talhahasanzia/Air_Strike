@@ -10,6 +10,17 @@ public class Launched : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate (Vector3.forward*3*Time.deltaTime);
+
+	}
+	void OnCollisionEnter(Collision col)
+	{
+
+		if(col.gameObject.tag=="box" || col.gameObject.tag=="terrain")
+		   {
+			Destroy(this.gameObject);
+
+		}
+
+
 	}
 }
