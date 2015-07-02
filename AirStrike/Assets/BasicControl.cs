@@ -25,11 +25,11 @@ public class BasicControl : MonoBehaviour {
 		}
 		if (Physics.Raycast (rayCastOrigin.transform.position,Quaternion.Euler(0,0,135) * transform.up ,out info,100)) {
 		
-			Debug.DrawLine(rayCastOrigin.transform.position,info.point);
+			//Debug.DrawLine(rayCastOrigin.transform.position,info.point);
 
 			if(Launch)
 			{
-				Vector3 tempTar=info.point;
+
 				GameObject missileClone;
 
 				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Missile.transform.rotation);
