@@ -35,8 +35,12 @@ public class BasicControl : MonoBehaviour {
 				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Missile.transform.rotation);
 
 				Rigidbody rg=missileClone.GetComponent<Rigidbody>();
-				rg.AddForce(-1650,-1200,0);
+				// right missile
+				//rg.AddForce(-1400,-1200,-150);
 
+
+				// left missile
+				rg.AddForce(-1400,-1200,150);
 
 				Launch=false;
 
