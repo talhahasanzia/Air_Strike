@@ -11,6 +11,8 @@ public class Launched : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+        transform.rotation = Quaternion.Euler(0, 0, 135);
 	}
 	void OnCollisionEnter(Collision col)
 	{

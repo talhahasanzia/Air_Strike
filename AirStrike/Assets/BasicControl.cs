@@ -16,17 +16,14 @@ public class BasicControl : MonoBehaviour {
 	void Update ()
     {
 
-		RaycastHit info;
+		
 
 
 		if (Input.GetKeyUp (KeyCode.Space)) {
 			Launch=true;		
 		
 		}
-		if (Physics.Raycast (rayCastOrigin.transform.position,Quaternion.Euler(0,0,135) * transform.up ,out info,100)) {
 		
-			//Debug.DrawLine(rayCastOrigin.transform.position,info.point);
-
 			if(Launch)
 			{
 
@@ -37,7 +34,7 @@ public class BasicControl : MonoBehaviour {
 				Rigidbody rg=missileClone.GetComponent<Rigidbody>();
 				// right missile
 				//rg.AddForce(-1400,-1200,-150);
-
+                rg.velocity = Vector3.zero;
 
 				// left missile
 				rg.AddForce(-1400,-1200,150);
@@ -46,10 +43,10 @@ public class BasicControl : MonoBehaviour {
 
 
 			}
-			Debug.Log("Raycast working");
+			
 
 		
-		}
+		
 	if(Input.GetKeyUp(KeyCode.LeftArrow))
 		   {
 

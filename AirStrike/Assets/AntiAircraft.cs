@@ -15,7 +15,7 @@ public class AntiAircraft : MonoBehaviour {
         rg_obj = gameObject.GetComponent<Rigidbody>();
         randomX = Random.Range(-120, 120);
         randomZ = Random.Range(-70, 70);
-        rg_obj.AddForce(randomX, 1500, randomZ);
+        rg_obj.AddForce(randomX, 1800, randomZ);
             
 
         
@@ -34,8 +34,8 @@ public class AntiAircraft : MonoBehaviour {
             rg_obj = gameObject.GetComponent<Rigidbody>();
             rg_obj.velocity = Vector3.zero;
             randomX = Random.Range(-120, 120);
-            randomZ = Random.Range(-70, 70);
-            rg_obj.AddForce(randomX, 1500, randomZ);
+            randomZ = Random.Range(-300, 300);
+            rg_obj.AddForce(randomX, 1800, randomZ);
         }          
 
 
