@@ -6,6 +6,6 @@ C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Unit
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.xml
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEditor.xml
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\UnityVS.AirStrike.CSharp.Plugins.csprojResolveAssemblyReference.cache
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\UnityVS.AirStrike.CSharp.Plugins.csprojResolveAssemblyReference.cache
