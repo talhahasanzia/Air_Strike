@@ -1,5 +1,5 @@
 5.0.0f4:1.9.9.0
-StandaloneWindows
+Android
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll
 C:\Program Files\Unity\Editor\Data\PlaybackEngines\androidplayer/UnityEditor.Android.Extensions.dll

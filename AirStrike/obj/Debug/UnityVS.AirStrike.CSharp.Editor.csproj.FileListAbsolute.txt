@@ -13,8 +13,6 @@ C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Unit
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEditor.WP8.Extensions.dll
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.dll
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
-C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.xml
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEditor.xml
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
@@ -31,3 +29,5 @@ C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Unit
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\UnityVS.AirStrike.CSharp.Editor.csprojResolveAssemblyReference.cache
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\obj\Debug\Assembly-CSharp-Editor.pdb
+C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\talha\Documents\GitHub\Air_Strike\AirStrike\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb

@@ -1,0 +1,11 @@
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\obj\Debug\UnityVS.BasicAI Tutorials.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\obj\Debug\Assembly-CSharp.dll
+C:\Users\talha\Documents\GitHub\Air_Strike\BasicAI Tutorials\obj\Debug\Assembly-CSharp.pdb
