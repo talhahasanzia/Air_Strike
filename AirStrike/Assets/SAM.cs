@@ -7,19 +7,21 @@ public class SAM : MonoBehaviour
     Rigidbody rg_obj;
     public GameObject StartPosition;
     public GameObject centerMissile;
-
-    static bool create = true;
+    public GameObject PlayerAircraft;
+    public float HitDistance=60;
+    float calculatedDistance = 0;
+    bool isLaunched = false;
+    public GameObject SAMComponent;
+    public GameObject ParentObject;
     // Use this for initialization
     void Start()
     {
 
+        StartPosition.transform.rotation = Quaternion.Euler(0, 0, 315);
 
+        rg_obj = centerMissile.GetComponent<Rigidbody>();
 
-        if(create)
-        LaunchCenterMissile();
-
-
-
+       
 
 
     }
@@ -28,17 +30,32 @@ public class SAM : MonoBehaviour
     void Update()
     {
 
-        
 
-
-        
-
-
-
-
-        if (rg_obj.velocity.y < 0)
+        Debug.Log("Distance: " + calculatedDistance);
+        if (rg_obj.velocity.y <= 0)
+        {
 
             Blast();
+
+        }
+
+
+        if (centerMissile.transform.position == StartPosition.transform.position)
+        {
+
+            isLaunched = false;      
+        
+        
+        }
+
+       
+
+        if (canHit() && !isLaunched)
+            LaunchCenterMissile();
+
+
+
+       
         
         
       
@@ -49,17 +66,55 @@ public class SAM : MonoBehaviour
 
     }
 
+    
+    bool canHit()
+    {
+
+
+     calculatedDistance = (PlayerAircraft.transform.position - StartPosition.transform.position).magnitude;
+
+
+       
+        if (calculatedDistance < HitDistance)
+        {
+
+
+
+            return true;
+
+        }
+        else
+        {
+
+
+            return false;
+        
+        }
+    
+    
+    }
+
     void LaunchCenterMissile()
     {
 
 
-        GameObject cloneMissile = (GameObject)Instantiate(centerMissile, StartPosition.transform.position, centerMissile.transform.rotation);
-
-        rg_obj = cloneMissile.GetComponent<Rigidbody>();
-        rg_obj.useGravity = true;
+        //GameObject cloneMissile = (GameObject)Instantiate(centerMissile, StartPosition.transform.position, centerMissile.transform.rotation);
+        Blast();
         
-        rg_obj.AddForce(500, 1000, -500);
-        create = false;
+        if (rg_obj.velocity.x != 0 || rg_obj.velocity.y != 0 || rg_obj.velocity.z != 0)
+        {
+
+            rg_obj.velocity = Vector3.zero;
+            rg_obj.angularVelocity = Vector3.zero;
+        
+        
+        
+        }
+        
+        rg_obj.useGravity = true;
+        centerMissile.transform.LookAt(PlayerAircraft.transform.position);
+        rg_obj.AddForce(centerMissile.transform.forward*5000);
+        isLaunched = true;    
     
     
     
@@ -70,30 +125,39 @@ public class SAM : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "terrain" || col.gameObject.tag == "plane" )
+        if (col.gameObject.tag == "missile"  )
         {
 
 
-            Blast();
-
+            Destruct();
 
         }
 
 
     }
     void Blast()
-    { 
-    
-    
+    {
+
+        //rg_obj.useGravity = false;
+        centerMissile.transform.position = StartPosition.transform.position;
+        centerMissile.transform.rotation = StartPosition.transform.rotation;
     // Code for blast
-        Destroy(gameObject);
+        //Destroy(gameObject);
     
     
     }
+    void Destruct()
+    {
 
+        Destroy(SAMComponent);
+        Destroy(gameObject);
+    
+    
+    
+    }
     public void OnDestroy()
     {
-        LaunchCenterMissile();
+        Destroy(ParentObject);
     }
     
 }

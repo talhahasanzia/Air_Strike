@@ -4,9 +4,12 @@ using System.Collections;
 public class BasicControl : MonoBehaviour {
 	public GameObject AirCraft;
 	public GameObject rayCastOrigin;
-	public GameObject Missile;
+	public GameObject LMissile;
+    public GameObject RMissile;
+
 	bool Launch=false;
-	public GameObject empty_obj;
+	public GameObject LeftMissilePos;
+    public GameObject RightMissilePos;
 	//public float AngleX,AngleY,AngleZ;
 	// Use this for initialization
 	void Start () {
@@ -16,8 +19,8 @@ public class BasicControl : MonoBehaviour {
 	void Update ()
     {
 
-		
 
+        gameObject.transform.Translate(-transform.right*0.5f);
 
 		if (Input.GetKeyUp (KeyCode.Space)) {
 			Launch=true;		
@@ -27,19 +30,22 @@ public class BasicControl : MonoBehaviour {
 			if(Launch)
 			{
 
-				GameObject missileClone;
+                //LeftMissileLaunch();
+                GameObject missileClone;
+                missileClone = (GameObject)Instantiate(LMissile, LeftMissilePos.transform.position, LMissile.transform.rotation);
 
-				missileClone=(GameObject)Instantiate(Missile,empty_obj.transform.position,Missile.transform.rotation);
+                Rigidbody rg = missileClone.GetComponent<Rigidbody>();
 
-				Rigidbody rg=missileClone.GetComponent<Rigidbody>();
-				// right missile
-				//rg.AddForce(-1400,-1200,-150);
-                rg.velocity = Vector3.zero;
 
-				// left missile
-				rg.AddForce(-1400,-1200,150);
+                // left missile
+                rg.AddForce(-1400, -1200, 150);
 
-				Launch=false;
+                Launch = false;
+                // right missile
+                //rg.AddForce(-1400,-1200,-150);
+                //rg.velocity = Vector3.zero;
+
+				
 
 
 			}
@@ -47,30 +53,37 @@ public class BasicControl : MonoBehaviour {
 
 		
 		
-	if(Input.GetKeyUp(KeyCode.LeftArrow))
+	if(Input.GetKey(KeyCode.LeftArrow))
 		   {
 
-			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x,AirCraft.transform.position.y,AirCraft.transform.position.z-10);
+			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x,AirCraft.transform.position.y,AirCraft.transform.position.z-1);
 		}
-		if(Input.GetKeyUp(KeyCode.RightArrow))
-
+		if(Input.GetKey(KeyCode.RightArrow))
+            
 		   {
 			
-			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x,AirCraft.transform.position.y,AirCraft.transform.position.z+10);
+			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x,AirCraft.transform.position.y,AirCraft.transform.position.z+1);
 		}
-		if (Input.GetKeyUp (KeyCode.UpArrow)) {
 		
-			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x-10,AirCraft.transform.position.y,AirCraft.transform.position.z);
-
-		
-		}
-		if (Input.GetKeyUp (KeyCode.DownArrow)) {
-			
-			AirCraft.transform.position=new Vector3(AirCraft.transform.position.x+10,AirCraft.transform.position.y,AirCraft.transform.position.z);
-			
-			
-		}
 	}
+
+
+
+    void LeftMissileLaunch()
+    {
+
+        GameObject missileClone;
+        missileClone = (GameObject)Instantiate(LMissile, LeftMissilePos.transform.position, LMissile.transform.rotation);
+
+        Rigidbody rg = missileClone.GetComponent<Rigidbody>();
+       
+
+        // left missile
+        rg.AddForce(-1400, -1200, 150);
+
+        
+    
+    }
 
 
 }
