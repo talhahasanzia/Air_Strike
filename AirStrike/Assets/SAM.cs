@@ -8,14 +8,17 @@ public class SAM : MonoBehaviour
     public GameObject StartPosition;
     public GameObject centerMissile;
     public GameObject PlayerAircraft;
-    public float HitDistance=60;
+    public float HitDistance=100;
     float calculatedDistance = 0;
     bool isLaunched = false;
     public GameObject SAMComponent;
     public GameObject ParentObject;
+    public float X;
     // Use this for initialization
     void Start()
     {
+
+        X = 0;
 
         StartPosition.transform.rotation = Quaternion.Euler(0, 0, 315);
 
@@ -110,9 +113,23 @@ public class SAM : MonoBehaviour
         
         }
         
+
+        //Vector3 inc=new Vector3(X,0,0);
+        //rg_obj.useGravity = true;
+        //centerMissile.transform.LookAt(PlayerAircraft.transform.position);
+        //rg_obj.AddForce((centerMissile.transform.forward+inc)*8000);
+
+
         rg_obj.useGravity = true;
-        centerMissile.transform.LookAt(PlayerAircraft.transform.position);
-        rg_obj.AddForce(centerMissile.transform.forward*8000);
+
+
+
+
+        int randomZ = Random.Range(-1000, 1000);
+
+        rg_obj.AddForce(1500, 1200, randomZ);
+        
+        
         isLaunched = true;    
     
     
@@ -140,6 +157,8 @@ public class SAM : MonoBehaviour
         //rg_obj.useGravity = false;
         centerMissile.transform.position = StartPosition.transform.position;
         centerMissile.transform.rotation = StartPosition.transform.rotation;
+        isLaunched = false;      
+        
     // Code for blast
         //Destroy(gameObject);
     

@@ -9,7 +9,7 @@ public class BasicControl : MonoBehaviour {
     bool isRotatingRight = false;
     public static int Score;
     public static int Health=100;
-
+    Transform StartingPosition;
     public float RotationSpeed;
     public GameObject AirCraft;
 	public GameObject rayCastOrigin;
@@ -24,6 +24,9 @@ public class BasicControl : MonoBehaviour {
 	//public float AngleX,AngleY,AngleZ;
 	// Use this for initialization
 	void Start () {
+
+
+        StartingPosition = AirCraft.GetComponent<Transform>();
 
         RotationSpeed = 1f;
         x = 10.6f; y = -90.3f;
@@ -92,22 +95,20 @@ public class BasicControl : MonoBehaviour {
 	if(Input.GetKey(KeyCode.LeftArrow))
 		   {
 
-
+               isRotatingRight = false;
+               
                AirCraft.transform.rotation = Quaternion.Lerp(AirCraft.transform.rotation, Quaternion.Euler(320, 0, 0), Time.deltaTime * RotationSpeed);
-                   isRotatingLeft = true;
-
                
         ParentObject.transform.position = new Vector3(ParentObject.transform.position.x, ParentObject.transform.position.y, ParentObject.transform.position.z - 1);
 		}
 		if(Input.GetKey(KeyCode.RightArrow))
             
 		   {
-
-
+               isRotatingLeft = false;
 
                AirCraft.transform.rotation = Quaternion.Lerp(AirCraft.transform.rotation, Quaternion.Euler(40, 0, 0), Time.deltaTime * RotationSpeed);
-                   isRotatingRight = true;
 
+               
                
                
                
