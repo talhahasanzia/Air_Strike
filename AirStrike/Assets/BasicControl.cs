@@ -5,11 +5,12 @@ public class BasicControl : MonoBehaviour {
 
     public float x = 10, y = -90, z = 0;
     public GameObject ParentObject;
-    
+    bool isRotatingLeft = false;
+    bool isRotatingRight = false;
     public static int Score;
     public static int Health=100;
 
-
+    public float RotationSpeed;
     public GameObject AirCraft;
 	public GameObject rayCastOrigin;
 	public GameObject LMissile;
@@ -24,7 +25,7 @@ public class BasicControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+        RotationSpeed = 1f;
         x = 10.6f; y = -90.3f;
 
 		}
@@ -32,7 +33,7 @@ public class BasicControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        AirCraft.transform.rotation = Quaternion.Euler(0, 0, 0);
+       // AirCraft.transform.rotation = Quaternion.Lerp(AirCraft.transform.rotation, Quaternion.Euler(0, 0, 0),1f) ;
         Debug.Log("Score:  " + Score + "   Health: "+Health);
 
         if (Health == 0)
@@ -90,13 +91,26 @@ public class BasicControl : MonoBehaviour {
 		
 	if(Input.GetKey(KeyCode.LeftArrow))
 		   {
-               AirCraft.transform.rotation = Quaternion.Euler(320, 0, 0);
-               ParentObject.transform.position = new Vector3(ParentObject.transform.position.x, ParentObject.transform.position.y, ParentObject.transform.position.z - 1);
+
+
+               AirCraft.transform.rotation = Quaternion.Lerp(AirCraft.transform.rotation, Quaternion.Euler(320, 0, 0), Time.deltaTime * RotationSpeed);
+                   isRotatingLeft = true;
+
+               
+        ParentObject.transform.position = new Vector3(ParentObject.transform.position.x, ParentObject.transform.position.y, ParentObject.transform.position.z - 1);
 		}
 		if(Input.GetKey(KeyCode.RightArrow))
             
 		   {
-               AirCraft.transform.rotation = Quaternion.Euler(40, 0, 0);
+
+
+
+               AirCraft.transform.rotation = Quaternion.Lerp(AirCraft.transform.rotation, Quaternion.Euler(40, 0, 0), Time.deltaTime * RotationSpeed);
+                   isRotatingRight = true;
+
+               
+               
+               
                ParentObject.transform.position = new Vector3(ParentObject.transform.position.x, ParentObject.transform.position.y, ParentObject.transform.position.z + 1);
 		}
 		
