@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MissileLaucnhed : MonoBehaviour {
+public class RightMissile : MonoBehaviour {
+
+    
+
 
 	// Use this for initialization
 	void Start () {
-	
+
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, 100);
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, 135);
+	
 	}
 
     void OnCollisionEnter(Collision col)
@@ -19,13 +25,10 @@ public class MissileLaucnhed : MonoBehaviour {
         if (col.gameObject.tag == "box" || col.gameObject.tag == "terrain" || col.gameObject.tag == "plane")
         {
             Destroy(this.gameObject);
-         
+
 
         }
 
-
+       
     }
-
-
-
 }

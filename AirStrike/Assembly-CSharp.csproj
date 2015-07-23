@@ -48,10 +48,13 @@
   <ItemGroup>
      <Compile Include="Assets\AntiAircraft.cs" />
      <Compile Include="Assets\BasicControl.cs" />
+     <Compile Include="Assets\Crosshair.cs" />
+     <Compile Include="Assets\Destroy.cs" />
      <Compile Include="Assets\GroundVisual.cs" />
      <Compile Include="Assets\Launched.cs" />
+     <Compile Include="Assets\LeftMissile.cs" />
      <Compile Include="Assets\MapCreation.cs" />
-     <Compile Include="Assets\MissileLaucnhed.cs" />
+     <Compile Include="Assets\RightMissile.cs" />
      <Compile Include="Assets\SAM.cs" />
      <Compile Include="Assets\Switching.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />

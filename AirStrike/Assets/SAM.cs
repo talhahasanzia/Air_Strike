@@ -31,7 +31,6 @@ public class SAM : MonoBehaviour
     {
 
 
-        Debug.Log("Distance: " + calculatedDistance);
         if (rg_obj.velocity.y <= 0)
         {
 
@@ -113,7 +112,7 @@ public class SAM : MonoBehaviour
         
         rg_obj.useGravity = true;
         centerMissile.transform.LookAt(PlayerAircraft.transform.position);
-        rg_obj.AddForce(centerMissile.transform.forward*5000);
+        rg_obj.AddForce(centerMissile.transform.forward*8000);
         isLaunched = true;    
     
     

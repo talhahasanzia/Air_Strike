@@ -4,7 +4,7 @@ using System.Collections;
 public class GroundVisual : MonoBehaviour {
 
 	public Camera cam;
-
+  
 	// Use this for initialization
 	public enum HorizontalAlignment{left, center, right}; 
 	public enum VerticalAlignment{top, middle, bottom}; 
@@ -51,5 +51,7 @@ public class GroundVisual : MonoBehaviour {
 		        
 
 		cam.pixelRect = new Rect(hloc,vloc,hsize,vsize);  
-	} 
+	}
+    
+ 
 }
