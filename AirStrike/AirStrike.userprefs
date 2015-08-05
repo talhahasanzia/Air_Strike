@@ -1,13 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AntiAircraft.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\AIPackages\Assets\Scripts\RobotController.js">
     <Files>
-      <File FileName="Assets\AntiAircraft.cs" Line="1" Column="1" />
-      <File FileName="Assets\BasicControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Switching.cs" Line="1" Column="1" />
-      <File FileName="Assets\GroundVisual.cs" Line="1" Column="1" />
-      <File FileName="Assets\MapCreation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Launched.cs" Line="1" Column="1" />
+      <File FileName="..\AIPackages\Assets\Scripts\RobotController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
